@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import GlobalSummary from "./GlobalSummary";
 
 const GlobalAPI = () => {
-  const [globalStatistics, setGlobalStatistics] = useState({
+  const [globalStats, setGlobalStats] = useState({
     active: 0,
     confirmed: 0,
     new_confirmed: 0,
@@ -18,7 +18,7 @@ const GlobalAPI = () => {
     })
       .then((res) => {
         let data = res.data.data[0];
-        setGlobalStatistics({
+        setGlobalStats({
           active: data.active,
           confirmed: data.confirmed,
           new_confirmed: data.new_confirmed,
@@ -33,7 +33,7 @@ const GlobalAPI = () => {
 
   return (
     <>
-      <GlobalSummary globalData={globalStatistics} />
+      <GlobalSummary globalData={globalStats} />
     </>
   );
 };

@@ -1,12 +1,14 @@
 import "./App.css";
 import Header from "./Header";
-import ApiCall from "./GlobalAPI";
+import GlobalAPI from "./GlobalAPI";
+import CountriesAPI from "./CountriesAPI";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <ApiCall />
+      <GlobalAPI />
+      <CountriesAPI />
     </div>
   );
 }
